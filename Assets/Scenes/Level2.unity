@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &21924987 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5809220570440302440, guid: a0164d9c476080e449c72cf58e7709ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 1551240453}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &100532911 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2575938327731363396, guid: a0164d9c476080e449c72cf58e7709ab,
@@ -146,6 +152,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 1877868437}
+  MyAnimator: {fileID: 944399423}
+  MyAnimatorLever: {fileID: 21924987}
+  Door: {fileID: 944399418}
+  doorStatus: 0
 --- !u!65 &100532914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -157,7 +167,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.7429947, z: 1.8859015}
+  m_Size: {x: 1.66, y: 2.19, z: 1.98}
   m_Center: {x: 0, y: 0.37149706, z: 0.44295073}
 --- !u!1 &170311373
 GameObject:
@@ -706,6 +716,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1564519312}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &944399418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 655968313393840390, guid: 9c41df7884462044e9f76f3245558b5f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1309011802}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &944399423
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944399418}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d0fb4c4470937a74cb60b7115759644c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1309011802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1018,10 +1053,35 @@ PrefabInstance:
       propertyPath: isValve
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5809220570440302440, guid: a0164d9c476080e449c72cf58e7709ab,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8547448563377378517, guid: a0164d9c476080e449c72cf58e7709ab,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078037237241554317, guid: a0164d9c476080e449c72cf58e7709ab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6655845
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078037237241554317, guid: a0164d9c476080e449c72cf58e7709ab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078037237241554317, guid: a0164d9c476080e449c72cf58e7709ab,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7463225
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078037237241554317, guid: a0164d9c476080e449c72cf58e7709ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -83.454
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0164d9c476080e449c72cf58e7709ab, type: 3}
@@ -1195,7 +1255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 173.49, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.666, y: -1.188}
+  m_AnchoredPosition: {x: -9.666, y: -1.1}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1877868439
